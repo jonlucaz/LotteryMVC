@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>
+        Gerador de números para loteria
+    </h1>
+
+    <button onclick="location.href='@Url.Action("GerarNumeros", "Home")'">Gerar Números da Mega Sena</button>
+
+    @if (ViewBag.Numeros != null)
+    {
+        <div>
+            Números da Mega Sena: @string.Join(", ", ViewBag.Numeros)
+        </div>
+    }
+
+</div>

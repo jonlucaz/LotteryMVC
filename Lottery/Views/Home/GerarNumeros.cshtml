@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+    var numeros = ViewBag.Numeros as int[];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mega Sena Generator</title>
+</head>
+<body>
+    <button onclick="location.href='@Url.Action("GerarNumeros", "Home")'">Gerar Números da Mega Sena</button>
+
+    @if (numeros != null)
+    {
+        <div>
+            Números da Mega Sena: @string.Join(", ", numeros)
+        </div>
+    }
+</body>
+</html>
+
